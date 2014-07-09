@@ -27,7 +27,7 @@
     <!-- Stylesheets -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Arvo:400,700' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?foo=17433">
+    <link rel="stylesheet" href="css/main.css?foo=1665">
 </head>
 
 <body>
@@ -113,7 +113,7 @@
                         </optgroup>
                         <optgroup label="Permits">
                             <option value="buildingpermits">
-                                Building Permits
+                                <span id="user-testing-permits">Building Permits</span>
                             </option>
                         </optgroup>
                     </select>
@@ -121,7 +121,7 @@
                 <div id="map"></div>
 
                 <!-- user-testing: time dropdown -->
-                <div class="dropdown pull-right user-testing-time datatoggle">
+                <div id="user-testing-time" class="dropdown pull-right datatoggle">
                   <button class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                     Show by Year
                     <span class="caret"></span>
@@ -133,7 +133,7 @@
                   </ul>
                 </div>
                 <!-- user-testing: end -->
-                
+
                 <div class="btn-group pull-right datatoggle">
                     <button type="button" class="btn btn-default btn-sm toggle-map">Show Map</button>
                     <button type="button" class="btn btn-default btn-sm toggle-table">Show Data</button>
@@ -142,6 +142,48 @@
                 <div class="form mapsearch">
                     <input id="searchbox" type="text" class="typeahead form-control" placeholder="search map">
                 </div>
+
+                <!-- user-testing: CE repeat violators table -->
+                <div id="user-testing-ce-table">
+                    <h4><strong>Top Code Enforcement Violations</strong></h4>
+                    <table class="table table-bordered table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Address</th>
+                                <th>Date</th>
+                                <th>Violations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>155 Main St</td>
+                                <td>7/1/14</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>2345 Birchwood St</td>
+                                <td>5/26/14</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>11 South Main St</td>
+                                <td>7/8/14</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5 N Broadway St</td>
+                                <td>1/23/14</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>22 Grove Ave</td>
+                                <td>3/15/14</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- user-testing: end -->
             </div>
             <div class="col-md-4 map-aside">
                 <div class="stats">
@@ -188,6 +230,7 @@
                         </g>
                     </svg>
                 </div>
+
                 <div class="meta-subtitle text-center"></div>
             </div>
         </div>
@@ -393,7 +436,7 @@
     <!-- End jQuery Tourbus -->
 
     <!-- scripts at the bottom yo -->
-    <script src="js/main.js?foo=17433"></script>
+    <script src="js/main.js?foo=1665"></script>
 
     <!--   Google Analytics -->
     <script>

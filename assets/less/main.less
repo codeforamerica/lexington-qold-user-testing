@@ -17,13 +17,18 @@
 /*@brand-primary: #008F75;*/
 @brand-primary: #1fa67a;
 
-// user-testing: css refactor after interviews
-.user-testing-time {
+// user-testing: refactor if keeping components
+#user-testing-time {
     margin-left: 5px;
     .dropdown-toggle {
         background-color: @brand-primary;
         color: white;
     }
+}
+
+#user-testing-ce-table {
+    margin-top: 50px;
+    position: relative;
 }
 
 
@@ -251,7 +256,9 @@ table {
     }
     // map
     .map-container {
-        height: 380px;
+        // user-testing: comment original height back in if not using the table
+        // height: 380px;
+        height: 590px;
     }
     #map {
         height: 320px;
