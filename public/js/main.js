@@ -29248,9 +29248,12 @@ $(document).ready(function () {
         $("#metric option[value='" + getURLParameter('m') + "']").prop('selected', true);
     }
     else {
-        var $options = $('.chosen-select').find('option'),
-            random = Math.floor((Math.random() * $options.length));
-        $options.eq(random).prop('selected', true);
+        //user-testing: set "Housing Code Violations" as default rather than set random default
+        $("#metric option[value='ce-housing']").prop('selected', true);
+
+        // var $options = $('.chosen-select').find('option'),
+        //     random = Math.floor((Math.random() * $options.length));
+        // $options.eq(random).prop('selected', true);
     }
 
     // set window popstate event
@@ -29482,6 +29485,14 @@ function changeMetric(data) {
         'metricdata': data,
         'metric': theVal
     });
+
+    //user-testing: only show table when Code Enforcement categories are selected
+    if (theVal == "ce-housing" || theVal == "ce-nuisance") {
+        $("#user-testing-ce-table").show();
+    }
+    else {
+        $("#user-testing-ce-table").hide();
+    }
 }
 
 function processMetric(msg, data) {
