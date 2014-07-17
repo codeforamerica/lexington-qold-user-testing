@@ -5651,7 +5651,11 @@ textarea.twitter-typeahead .tt-hint {
 .q3,
 .q4,
 .q5 {
+<<<<<<< HEAD
+  fill-opacity: 0.7;
+=======
   fill-opacity: 0.8;
+>>>>>>> dev
 }
 .q0 {
   fill: #baffcc;
